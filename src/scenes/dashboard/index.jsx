@@ -21,7 +21,7 @@ const Dashboard = () => {
     <Box m="20px">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+        <Header title="DASHBOARD" subtitle="Este é seu Dashboard de Licenciamento" />
 
         <Box>
           <Button
@@ -34,7 +34,7 @@ const Dashboard = () => {
             }}
           >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-            Download Reports
+            Baixar Relatórios
           </Button>
         </Box>
       </Box>
@@ -74,7 +74,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="431,225"
+            title="105,431,225"
             subtitle="Sales Obtained"
             progress="0.50"
             increase="+21%"
@@ -150,7 +150,7 @@ const Dashboard = () => {
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
               >
-                $59,342.32
+                $459,342.32
               </Typography>
             </Box>
             <Box>
