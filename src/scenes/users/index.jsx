@@ -60,19 +60,22 @@ const Contacts = () => {
     const handleEditClick = (id) => {
         navigate(`/edit/${id}`);
     };
-
+    
     const handleDetailsClick = (id) => {
-      //You may want to fetch the data before navigating, so the screen is loading with information.
-
-      axios.get(`http://localhost:3399/lic/user/${id}`)
-           .then(response => {
-              navigate(`/workspace/`, { state: { licenses: response.data } }); // Pass the license data in the state
-           })
-           .catch(error => {
-              console.error("Error fetching licenses:", error);
-              //Handle appropriately
-           })
-  };
+        axios.get(`http://localhost:3399/lic/user/${id}`) // Use your actual endpoint to get license details for user with id
+            .then(response => {
+                navigate(`/workspace/`, { state: { licenses: response.data } }); // Pass the license data in the state
+            })
+            .catch(error => {
+                console.error("Error fetching licenses:", error);
+                Swal.fire({
+                    title: "Erro!",
+                    text: "Erro ao carregar detalhes do workspace",
+                    icon: "error",
+                    zIndex: 2000
+                });
+            });
+    };
 
     const handleDeleteClick = async (id) => {
         Swal.fire({
@@ -207,6 +210,7 @@ const Contacts = () => {
                 );
             },
         },
+       
     ];
 
     const modalStyle = {

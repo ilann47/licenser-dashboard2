@@ -19,9 +19,7 @@ const Topbar = () => {
     p={2} 
     backgroundColor={colors.primary[400]}
     >
-      <Box
-      >
-      </Box>
+
       {/* LICENSER TEXT */}
       <Typography
         variant="h1"               
